@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="description" content="一地一味" />
+    <meta name="keywords" content="一地一味" />
+    <script type="text/javascript" src="/tpl/static/v4/js/jquery1.71.js"></script>
+    <script type="text/javascript" src="/tpl/static/v4/js/common.js?ver=1420362254"></script>
+    <script type="text/javascript" src="/tpl/static/v4/js/public.js"></script>
+    <link id="mobile_css" rel="stylesheet" type="text/css" href="/tpl/static/v4/css/common.css?ver=1420800846" />
+    <script src="/tpl/Wap/default/common/css/store/js/notification.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="/tpl/Wap/default/common/css/store/css/style_touch.css">
+    <title>一地一味</title>
+    <script type="text/javascript">
+    $(function() {countDown("2015/01/15 08:00:00", "#demo01 .day", "#demo02 .hour", "#demo02 .minute", "#demo02 .second");});
+    function countDown(time, day_elem, hour_elem, minute_elem, second_elem) {
+        //if(typeof end_time == "string")
+        var end_time = new Date(time).getTime(), //月份是实际月份-1
+        //current_time = new Date().getTime(),
+        sys_second = (end_time - new Date().getTime()) / 1000;
+        var timer = setInterval(function() {
+            if (sys_second > 0) {
+                sys_second -= 1;
+                var day = Math.floor((sys_second / 3600) / 24);
+                var hour = Math.floor((sys_second / 3600) % 24);
+                var minute = Math.floor((sys_second / 60) % 60);
+                var second = Math.floor(sys_second % 60);
+                day_elem && $(day_elem).text(day);//计算天
+                $(hour_elem).text(hour < 10 ? "0" + hour : hour);//计算小时
+                $(minute_elem).text(minute < 10 ? "0" + minute : minute);//计算分
+                $(second_elem).text(second < 10 ? "0" + second : second);// 计算秒
+            } else {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+    </script>
+    <script type="text/javascript" src="/tpl/static/v4/js/include.js"></script>
+    <link href="/tpl/static/v4/css/slider.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="scnhtm5" class="m-body"></div>
+    <!--弹窗用--->
+    <!--contBanner_wrap Begin-->
+    <div class="contBanner_wrap">
+        <ul class="contBanner banner_list">
+            <a href="http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=year_goods">
+                <li><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54b2997bd96aa.jpg" width="640" alt=""></li>
+            </a>
+            <a href="http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=mem_world&showwxpaytitle=1"><li><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54b25278a9197.jpg" width="640" alt=""></li></a>
+            <a href="http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=product&token=odagpj1405263093&id=280"><li><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/548d64be60ef9.jpg" width="640" alt=""></li></a>
+            <a href="http://weixin.yidiyiwei.com/xuanchuan/index.html"><li><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/548d64eaa661a.jpg" width="640" alt=""></li></a>
+        </ul>
+    </div>
+    <!--contBanner_wrap End-->
+    <nav class="navFixed"><ul><li>
+        <a href="/index.php?g=Wap&m=Member_v4&a=index&showwxpaytitle=1"><img src="/tpl/static/v4/images/nav_pic01.jpg" />个人中心</a></li><li>
+            <a href="/index.php?g=Wap&m=Store_v4&a=hot&showwxpaytitle=1"><img src="/tpl/static/v4/images/nav_pic02.jpg" />全部商品</a></li><li>
+                <a href="/index.php?g=Wap&m=Store_v4&a=mem_world&showwxpaytitle=1"><img src="/tpl/static/v4/images/nav_pic03.png" />会员专享</a></li><li>
+                    <a href="javascript:;" onClick="jump_cart()"><img src="/tpl/static/v4/images/nav_pic04.jpg" />购物车<span class="number">0</span></a></li><li>
+                        <a href="/index.php?g=Wap&m=Store_v4&a=search&showwxpaytitle=1"><img src="/tpl/static/v4/images/nav_pic05.jpg" />搜一搜</a></li></ul></nav><!--warp Begin--><div class="warp"><!--in_buying Begin--><div class="in_buying"><!--in_date Begin--><div class="in_date"><dl><dt><div class="divdt">距离本场<span>抢购</span>结束：</div><div id="demo01"><span class="day">-</span>天</div></dt><dd><div class="colockbox" id="demo02"><div class="date"><span class="hour">-</span><span class="minute">-</span><span class="second">-</span></div><img src="/tpl/static/v4/images/colockbg.jpg" /></div></dd></dl><div class="divimg"><a href="/index.php?g=Wap&m=Store_v4&a=qianggou&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/548d311c73e15.jpg" /></a></div></div><!--in_date End--><!--in_imglist Begin--><div class="in_imglist"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=products&showwxpaytitle=1&catid=27"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54972716e00a3.jpg" /></a></li><li class="li02"><a href="/index.php?g=Wap&m=Store_v4&a=xinpin&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5497269f202a9.jpg" /></a></li><li class="li03"><a href="/index.php?g=Wap&m=Store_v4&a=tenyuan&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/549726f83d2ac.jpg" /></a></li></ul></div><!--in_imglist End--></div><!--in_buying End--><!--in_ad01 Begin--><div class="in_ad01"><a href="http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=product&id=128"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54a11cce1b926.jpg" /></a></div><!--in_ad01 End--><div class="in_delicacies"><!--in_delicacieslf Begin--><div class="in_delicacieslf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=33&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54b2467f52010.jpg" /></a></div><!--in_delicacieslf End--><!--in_delicaciesrt Begin--><div class="in_delicaciesrt"><ul><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=350&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54b249a323b5b.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=351&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54b24c325c19d.jpg" /></a></li></ul></div><!--in_delicaciesrt End--></div><!--in_fresh Begin--><div class="in_fresh"><!--in_freshlf Begin--><div class="in_freshlf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=25&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/549792a4858f2.jpg" /></a></div><!--in_freshlf End--><!--in_freshcn Begin--><div class="in_freshcn"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=288&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e43424885.jpg" /></a></li><li ><a href="/index.php?g=Wap&m=Store_v4&a=product&id=297&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e3f5b6a78.jpg" /></a></li></ul></div><!--in_freshcn End--><!--in_freshrt Begin--><div class="in_freshrt"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=307&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e413ae7f7.jpg" /></a></div><!--in_freshrt End--></div><!--in_fresh End--><!--in_delicacies Begin--><div class="in_delicacies"><!--in_delicacieslf Begin--><div class="in_delicacieslf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=26&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5497928f41488.jpg" /></a></div><!--in_delicacieslf End--><!--in_delicaciesrt Begin--><div class="in_delicaciesrt"><ul><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=192&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e8b784f56.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=223&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54978716447f4.jpg" /></a></li></ul></div><!--in_delicaciesrt End--></div><!--in_delicacies End--><!--in_ad01 Begin--><div class="in_ad01"><a href="http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=gaodashang&token=odagpj1405263093&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/548d60690e8a7.jpg" /></a></div><!--in_ad01 End--><!--in_place Begin--><div class="in_place"><!--in_placelf Begin--><div class="in_placelf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=28&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/549792611d72c.jpg" /></a></div><!--in_placelf End--><!--in_placecn Begin--><div class="in_placecn"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=276&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e9433de8c.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=46&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e8f076d4b.jpg" /></a></li></ul></div><!--in_placecn End--><!--in_placecn Begin--><div class="in_placecn"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=324&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54a20538a220a.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=293&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e90ee2cd8.jpg" /></a></li></ul></div><!--in_placecn End--></div><!--in_place End--><!--in_fresh Begin--><div class="in_fresh in_grain"><!--in_freshlf Begin--><div class="in_freshlf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=29&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54979250a9e8a.jpg" /></a></div><!--in_freshlf End--><!--in_freshcn Begin--><div class="in_freshcn"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=254&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e99d6e5e6.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=269&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e9de951f4.jpg" /></a></li></ul></div><!--in_freshcn End--><!--in_freshrt Begin--><div class="in_freshrt"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=126&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496e9c2023e6.jpg" /></a></div><!--in_freshrt End--></div><!--in_fresh End--><!--in_delicacies Begin--><div class="in_delicacies"><!--in_delicacieslf Begin--><div class="in_delicacieslf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=30&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/54979240d3021.jpg" /></a></div><!--in_delicacieslf End--><!--in_delicaciesrt Begin--><div class="in_delicaciesrt"><ul><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=5&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496ea7e29dca.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=163&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5497873bcc7d7.jpg" /></a></li></ul></div><!--in_delicaciesrt End--></div><!--in_delicacies End--><!--in_fresh Begin--><div class="in_fresh"><!--in_freshlf Begin--><div class="in_freshlf"><a href="/index.php?g=Wap&m=Store_v4&a=products&catid=31&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5497922d7469f.jpg" /></a></div><!--in_freshlf End--><!--in_freshcn Begin--><div class="in_freshcn"><ul><li class="li01"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=227&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496ead1ec17a.jpg" /></a></li><li><a href="/index.php?g=Wap&m=Store_v4&a=product&id=253&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496eaff8f092.jpg" /></a></li></ul></div><!--in_freshcn End--><!--in_freshrt Begin--><div class="in_freshrt"><a href="/index.php?g=Wap&m=Store_v4&a=product&id=266&showwxpaytitle=1"><img src="http://oss-cn-qingdao.aliyuncs.com/weixin-ydyw/upload_img/5496eb1b0f568.jpg" /></a></div><!--in_freshrt End--></div><!--in_fresh End--><div class="loginin_dianbut"><span class="mem_codetc"><img src="/tpl/static/v4/images/in_dian.png" /></span></div><div class="bgbox3" style="display: none;"></div><div class="loginboxkg3"><div class="loginbox3" style="display: none;"><div class="bgbar3"></div><div class="con3"><div class="in_dian"><!--in_diannr Begin--><div class="in_diannr"><h2>选择您的所在城市</h2><h3>因各城市所售商品不同，请根据您的所在地址选择相应的城市</h3><!--in_dianbut Begin--><div class="in_dianbut"><ul><li class="li01" onclick='select_city(1)'>我在北京</li><li class="li02" onclick='select_city(2)'>我在杭州</li></ul></div><!--in_dianbut End--></div><!--in_diannr End--></div></div></div></div></div><!--warp End--><script>        function select_city(city){
+    $.ajax({
+        type: "GET",
+        url: "/index.php?g=Wap&m=Store_v4&a=select_city",
+        data: {city: city},
+        dataType: "json",
+        success: function(data) {
+            if(data.status==1){
+                $(".bgbox3").show();
+                $(".loginbox3").hide();
+                location.reload();
+            }else{
+                return floatNotify.simple('定位失败，请重新选择！');
+            }
+        }
+    });
+}
+function jump_cart() {
+    $.ajax({
+        type: "GET",
+        url: "/index.php?g=Wap&m=Store_v4&a=is_Cart",
+        dataType: "text",
+        success: function(data) {
+            if (data == 1) {
+                location.href = "/index.php?g=Wap&m=Store_v4&a=orderCartwyw&showwxpaytitle=1";
+            } else {
+                return floatNotify.simple('购物车没有商品。');
+            }
+        }
+    });
+}
+function activeAlert() {
+    return floatNotify.simple('活动即将开始');
+}
+</script><script type="text/javascript" src="http://weixin-js-css.oss-cn-beijing.aliyuncs.com/v4/js/fenxiang_v4.js"></script><script>window.shareData = window.shareData || {
+    "timeLineLink": "http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=index&ucode=40907",
+    "sendFriendLink": "http://weixin.yidiyiwei.com/index.php?g=Wap&m=Store_v4&a=index&ucode=40907",
+    "tTitle": '拉近您与产地的距离，一地一味 官方微信商城',
+    "tContent": '一地一味与热爱生活、追求品质的你，一同寻找生态、纯真健康的美食。',
+    "fTitle": "一地一味 官方微信商城",
+    "fContent": '一地一味与热爱生活、追求品质的你，一同寻找生态、纯真健康的美食。',
+    "imgUrl": "http://weixin.yidiyiwei.com/uploads/logo.png"
+}
+</script><script>
+    function getShareImageUrl(){
+        var share_imgurl = '';
+        if('' == share_imgurl){
+            var shareImgObj = document.getElementsByClassName('shareImgUrl')[0];
+            if('undefined' != typeof(shareImgObj)){
+                share_imgurl = shareImgObj.src;
+            }
+        }
+        return window.shareData.imgUrl || share_imgurl;
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                if('share_timeline:cancel' != res.err_msg){
+                    weimobAfterShare("",window.shareData.timeLineLink,'timeline');
+                }
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                if('share_timeline:cancel' != res.err_msg){
+                    //fenxiang_hongbao('oFAAIt6C_wSvRERuZWVbane_TCDc');
+                    weimobAfterShare("",window.shareData.timeLineLink,'timeline');
+                }
+                _report('timeline', res.err_msg);
+            });
+        });
+
+    }, false)
+</script></body></html>
